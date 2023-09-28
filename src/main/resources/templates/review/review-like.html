@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Нравится</title>
+    <style>
+        .lines {
+            left: 120px;
+            top: 267px;
+        }
+
+        .rectangle-line-green {
+            width: 371px;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="rectangle1">
+                <div class="ellipse1"></div>
+                <div class="ellipse2"></div>
+            </div>
+            <div class="lines" left="120px" top="297px">
+                <div class="rectangle-line-white"></div>
+                <div class="rectangle-line-green" width="371px"></div>
+            </div>
+        </div>
+        <div class="question">
+            <h1>Что вам понравилось?</h1>
+        </div>
+        <div class="clarification">
+            <h2>(Можно выбрать несколько вариантов ответа)</h2>
+        </div>
+        <form method="post">
+            <div class="check-options">
+                <div>
+                    <label for="good_time">Записали в удобное время
+                        <input type="checkbox" id="good_time" name="good_time" value="good_time"
+                               th:checked="${currentReview.good_time}"/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div><label for="good_admin">Обслуживание администраторов
+                    <input type="checkbox" id="good_admin" name="good_admin" value="good_admin"
+                           th:checked="${currentReview.good_admin}">
+                    <span class="checkmark"></span>
+                </label>
+                </div>
+                <div>
+                    <label for="good_doctor">Понравился доктор
+                        <input type="checkbox" id="good_doctor" name="good_doctor" value="good_doctor"
+                               th:checked="${currentReview.good_doctor}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="good_fast">Быстро и без очередей
+                        <input type="checkbox" id="good_fast" name="good_fast" value="good_fast"
+                               th:checked="${currentReview.good_fast}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="good_fast">
+                        Другое
+                        <input type="checkbox" id="good_other" name="good_other" value="good_other"
+                               th:checked="${currentReview.good_other}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="arrows">
+                <span>
+                    <img th:src="@{/img/vector_left_50.png}"/>
+                    <input type="submit" name="isBack" value="true">
+                </span>
+                <span>
+                <img th:src="@{/img/vector_right_100.png}"/>
+                    <input type="submit" name="isBack" value="false">
+                </span>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

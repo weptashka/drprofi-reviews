@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Список отзывов</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+    body, main {
+        background: #874DBF;
+    }
+
+
+    p {
+        margin: 2px;
+    }
+
+    .review_table {
+        position: relative;
+        top: 120px;
+        left: 0px;
+        margin-bottom: 50px;
+    }
+
+    .review_table table {
+        border-collapse: collapse;
+        border: none;
+    }
+
+    tr {
+        border-collapse: separate;
+    }
+
+    th {
+        border-collapse: separate;
+        border-top: 1px solid #FFFFFF;
+        border-right: 1px solid #FFFFFF;
+    }
+
+    .review_table p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 48px;
+
+        color: #FFFFFF;
+    }
+
+    .review_table thead tr th:first-child {
+        border-radius: 20px 0 0 0;
+    }
+
+    .review_table thead tr th:last-child {
+        border-radius: 0 20px 0 0;
+    }
+
+    .review_table tbody tr:last-child th {
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .list_name {
+
+    }
+
+    .list_name h1 {
+        width: auto;
+    }
+
+    .back_button {
+    }
+
+    .back_button a {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 48px;
+
+        color: #FFFFFF;
+    }
+
+    .navigation {
+        position: relative;
+        width: 1040px;
+        top: 30px;
+        left: 120px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
+<body>
+<main>
+    <div class="navigation">
+        <div class="list_name">
+            <h1>Список отзывов</h1>
+        </div>
+        <div class="back_button">
+            <a href="/hello">Назад</a>
+        </div>
+    </div>
+    <div class="review_table">
+        <table>
+            <tr>
+                <th><p>ID</p></th>
+                <th><p>grade</p></th>
+                <th><p>good_time</p></th>
+                <th><p>good_admin</p></th>
+                <th><p>good_doctor</p></th>
+                <th><p>good_fast</p></th>
+                <th><p>good_other</p></th>
+                <th><p>TEXT</p></th>
+                <th><p>bad_time</p></th>
+                <th><p>bad_admin</p></th>
+                <th><p>bad_doctor</p></th>
+                <th><p>bad_interior</p></th>
+                <th><p>bad_other</p></th>
+                <th><p>BAD_TEXT</p></th>
+                <th><p>mobile_number</p></th>
+                <th><p>friend_grade</p></th>
+                <th><p>date</p></th>
+                <th><p>datestring</p></th>
+            </tr>
+            <tr th:each="el: ${reviews}">
+                <th><p th:text="${el.id}"></p></th>
+                <th><p th:text="${el.grade}"></p></th>
+                <th><p th:text="${el.good_time}"></th>
+                <th><p th:text="${el.good_admin}"></th>
+                <th><p th:text="${el.good_doctor}"></th>
+                <th><p th:text="${el.good_fast}"></th>
+                <th><p th:text="${el.good_other}"></th>
+                <th><p th:text="${el.review_text}"></th>
+                <th><p th:text="${el.bad_time}"></th>
+                <th><p th:text="${el.bad_admin}"></th>
+                <th><p th:text="${el.bad_doctor}"></th>
+                <th><p th:text="${el.bad_interior}"></th>
+                <th><p th:text="${el.bad_other}"></th>
+                <th><p th:text="${el.review_text_bad}"></th>
+                <th><p th:text="${el.mobile_number}"></th>
+                <th><p th:text="${el.friend_grade}"></th>
+                <th><p th:text="${el.review_date}"></th>
+                <th><p th:text="${el.datestring}"></th>
+            </tr>
+        </table>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Вероятность рекомендации друзьям</title>
+    <style>
+        .lines {
+            top: 321px;
+        }
+
+        .rectangle-line-green {
+            width: 737px;
+        }
+
+        .clarification {
+            top: 259px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="rectangle1">
+                <div class="ellipse1"></div>
+                <div class="ellipse2"></div>
+            </div>
+            <div class="lines">
+                <div class="rectangle-line-white"></div>
+                <div class="rectangle-line-green"></div>
+            </div>
+        </div>
+        <div class="question">
+            <h1>Какова вероятность того, что вы порекомендуете нас вашим друзьям?</h1>
+        </div>
+        <form method="post">
+            <div class="buttons_friend_recommendation">
+                <span><input type="submit" name="friend_grade" value="1" width="200 px" alt="Grade 1"></span>
+                <span><input type="submit" name="friend_grade" value="2" width="200 px" alt="Grade 2"></span>
+                <span><input type="submit" name="friend_grade" value="3" width="200 px" alt="Grade 3"></span>
+                <span><input type="submit" name="friend_grade" value="4" width="200 px" alt="Grade 4"></span>
+                <span><input type="submit" name="friend_grade" value="5" width="200 px" alt="Grade 5"></span>
+                <span><input type="submit" name="friend_grade" value="6" width="200 px" alt="Grade 6"></span>
+                <span><input type="submit" name="friend_grade" value="7" width="200 px" alt="Grade 7"></span>
+                <span><input type="submit" name="friend_grade" value="8" width="200 px" alt="Grade 8"></span>
+                <span><input type="submit" name="friend_grade" value="9" width="200 px" alt="Grade 9"></span>
+                <span><input type="submit" name="friend_grade" value="10" width="200 px" alt="Grade 10"></span>
+            </div>
+            <div class="arrows">
+            <span>
+                <img th:src="@{/img/vector_left_50.png}"/>
+                <input type="submit" name="isBack" value="true">
+            </span>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

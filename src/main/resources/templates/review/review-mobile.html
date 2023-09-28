@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Номер телефона</title>
+    <style>
+        .lines {
+            top: 400px;
+        }
+
+        .rectangle-line-green {
+            width: 606px;
+        }
+
+        .clarification {
+            top: 320px;
+        }
+
+        textarea text {
+            margin-left: 50px;
+            margin-top: 28px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="rectangle1">
+                <div class="ellipse1"></div>
+                <div class="ellipse2"></div>
+            </div>
+            <div class="lines">
+                <div class="rectangle-line-white"></div>
+                <div class="rectangle-line-green"></div>
+            </div>
+        </div>
+        <div class="question">
+            <h1>Вы можете оставить свой номер телефона, если хотите, чтобы мы с Вами связались</h1>
+        </div>
+        <div class="clarification">
+            <h2>Или пропустите</h2>
+        </div>
+        <form method="post">
+            <div class="textarea_input_text">
+            <textarea type="text" name="mobile_number" placeholder="Ваш номер телефона"
+                      th:value="${currentReview.mobile_number}"
+                      th:text="${currentReview.mobile_number}"
+                      class="form-control"></textarea>
+            </div>
+            <div class="arrows">
+            <span>
+                <img th:src="@{/img/vector_left_50.png}"/>
+                <input type="submit" name="isBack" value="true">
+            </span>
+                <span>
+                <img th:src="@{/img/vector_right_100.png}"/>
+                <input type="submit" name="isBack" value="false">
+            </span>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

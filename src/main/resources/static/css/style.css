@@ -1,0 +1,470 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');*/
+
+/*ALL PAGES*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/Montserrat-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+
+h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+
+    color: #FFFFFF;
+}
+
+h2 {
+    position: relative;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 43px;
+
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #4E1584;
+    /*background-color: #874DBF;*/
+}
+
+main {
+}
+
+.container {
+    position: relative;
+    top: -50px;
+    left: -51px;
+}
+
+
+input[type="submit"] {
+    color: transparent;
+}
+
+.card {
+    /*position: fixed;*/
+    /*clip-path: inset(20px 20px 50px 20px);*/
+}
+
+.rectangle1 {
+    position: absolute;
+    width: 1180px;
+    height: 750px;
+    left: 50px;
+    top: 50px;
+    overflow: hidden;
+
+    background: #874DBF;
+    /*border-radius: 25px;*/
+}
+
+.ellipse1 {
+    position: absolute;
+    width: 631px;
+    height: 631px;
+    left: 725px;
+    top: -184px;
+    border-radius: 50%;
+    background: #9653D8;
+}
+
+.ellipse2 {
+    position: absolute;
+    width: 416px;
+    height: 416px;
+    left: -167px;
+    top: 451px;
+    border-radius: 50%;
+    background: #9653D8;
+}
+
+.lines {
+    position: relative;
+    left: 120px;
+}
+
+.rectangle-line-white {
+    position: absolute;
+    width: 1040px;
+    height: 38px;
+
+    background: #FFFFFF;
+    border-radius: 53px;
+}
+
+.rectangle-line-green {
+    position: absolute;
+    height: 38px;
+
+    border-radius: 53px;
+    background: linear-gradient(to right, #8FD400, #F0FFD2);
+}
+
+/*bold letters on every frame*/
+.question {
+    position: absolute;
+    width: 1040px;
+    height: 107px;
+    left: 120px;
+    top: 120px;
+}
+
+
+
+.clarification {
+    position: absolute;
+    width: 976px;
+    height: 34px;
+    left: 120px;
+    top: 198px;
+}
+
+
+
+
+/*GRADE*/
+/*first frame emoji group*/
+.grade-emoji {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 955px;
+    height: 159px;
+    left: 163px;
+    top: 405px;
+}
+
+/*each emoji*/
+.grade-emoji span {
+    position: relative;
+    width: 159px;
+    height: 159px;
+}
+
+.grade-emoji span img {
+    width: 159px;
+    height: 159px;
+}
+
+.grade-emoji input {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 159px;
+    height: 159px;
+
+    appearance: none;
+    background-color: transparent;
+    border-color: transparent;
+
+    z-index: 10;
+}
+
+
+/*LIKE, DISLIKE*/
+.check-options {
+    position: absolute;
+    width: 1040px;
+    height: 600px;
+    left: 120px;
+    top: 353px;
+}
+
+/*Hide the default input*/
+.check-options input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    /*width: 29px;*/
+    /*height: 29px;*/
+    /*appearance: none;*/
+}
+
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 29px;
+    width: 29px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.check-options label {
+    padding-left: 49px;
+    position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 48px;
+    cursor: pointer;
+
+    color: #FFFFFF;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.check-options label input:checked ~ .checkmark {
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check-options label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-options label .checkmark:after {
+    left: 14px;
+    top: -8px;
+    width: 8px;
+    height: 26px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*label span {*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*    background-color: transparent;*/
+/*    width: 29px;*/
+/*    height: 29px;*/
+/*    transform-origin: center;*/
+/*    border: 1px solid #fff;*/
+/*    border-radius: 50%;*/
+/*    margin-right: 20px;*/
+/*    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(.78, -1.22, .17, 1.89)*/
+/*}*/
+
+
+
+
+
+/*MOBIL, TEXT, BAD_TEXT*/
+.textarea_input_text {
+    position: relative;
+    left: 120px;
+    top: 468px;
+}
+
+.textarea_input_text textarea {
+    position: absolute;
+    width: 980px;
+    height: 75px;
+    /*(минус падинги)*/
+
+
+    padding-top: 28px;
+    padding-left: 60px;
+
+    resize: none;
+
+    background: #FFFFFF;
+    border-radius: 53px;
+    border-color: transparent;
+}
+
+.form-control {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 43px;
+
+    color: #000000;
+}
+
+.form-control [type="textarea"] {
+    margin-top: 28px;
+    margin-left: 60px;
+}
+
+
+
+
+
+/*THANKS*/
+.back_to_main {
+    position: absolute;
+    width: 693px;
+    height: 53px;
+    left: 293px;
+    top: 512px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.back_to_main a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 43px;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+
+}
+
+.buttons_friend_recommendation {
+    position: relative;
+    top: 435px;
+    left: 173px;
+
+    width: 934px;
+    height: 67px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+
+.buttons_friend_recommendation span {
+}
+
+.buttons_friend_recommendation span input {
+    width: 63px;
+    height: 63px;
+    appearance: none;
+    background-color: transparent;
+    border-color: transparent;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 67px;
+
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+/*ARROWS*/
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 196px;
+    height: 33px;
+    left: 543px;
+    top: 647px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.arrows span {
+    position: relative;
+    width: 56px;
+    height: 33px;
+}
+
+.arrows span img {
+    width: 56px;
+    height: 33px;
+}
+
+.arrows span input {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 56px;
+    height: 33px;
+
+    appearance: none;
+    background-color: transparent;
+    border-color: transparent;
+
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+/*HELLO*/
+.hello {
+    position: absolute;
+    width: 693px;
+    height: 53px;
+    left: 293px;
+    top: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.hello a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 43px;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+}

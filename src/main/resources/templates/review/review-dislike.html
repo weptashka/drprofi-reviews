@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Не нравится</title>
+    <style>
+        .lines {
+            left: 120px;
+            top: 267px;
+        }
+
+        .rectangle-line-green {
+            width: 440px;
+        }
+
+        fieldset {
+            display: block;
+            margin-left: 2px;
+            margin-right: 2px;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="rectangle1">
+                <div class="ellipse1"></div>
+                <div class="ellipse2"></div>
+            </div>
+            <div class="lines" left="120px" top="297px">
+                <div class="rectangle-line-white"></div>
+                <div class="rectangle-line-green" width="371px"></div>
+            </div>
+        </div>
+        <div class="question">
+            <h1>Что вам не понравилось?</h1>
+        </div>
+        <div class="clarification">
+            <h2>(Можно выбрать несколько вариантов ответа)</h2>
+        </div>
+        <form method="post">
+            <div class="check-options">
+                <div>
+                    <label for="bad_time">Не записали в удобное для вас время
+                        <input type="checkbox" id="bad_time" name="bad_time" value="bad_time"
+                               th:checked="${currentReview.bad_time}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="bad_admin">Не понравилось обслуживание администраторов
+                        <input type="checkbox" id="bad_admin" name="bad_admin" value="bad_admin"
+                               th:checked="${currentReview.bad_admin}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="bad_doctor">Не понравился доктор
+                        <input type="checkbox" id="bad_doctor" name="bad_doctor" value="bad_doctor"
+                               th:checked="${currentReview.bad_doctor}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="bad_interior">Не понравился интерьер
+                        <input type="checkbox" id="bad_interior" name="bad_interior" value="bad_interior"
+                               th:checked="${currentReview.bad_interior}">
+                        <span class="checkmark"></span>
+                        </label>
+                </div>
+                <div>
+                    <label for="bad_interior">Другое
+                        <input type="checkbox" id="bad_other" name="bad_other" value="bad_other"
+                               th:checked="${currentReview.bad_other}">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="arrows">
+            <span>
+                <img th:src="@{/img/vector_left_50.png}"/>
+                <input type="submit" name="isBack" value="true">
+            </span>
+                <span>
+                <img th:src="@{/img/vector_right_100.png}"/>
+                <input type="submit" name="isBack" value="false">
+            </span>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

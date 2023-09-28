@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Позитивный опыт</title>
+    <style>
+        .lines {
+            left: 120px;
+            top: 381px;
+        }
+
+        .rectangle-line-green {
+            width: 520px;
+        }
+
+        .clarification {
+            top: 259px;
+        }
+
+        .textarea_input_text {
+            position: relative;
+            left: 120px;
+            top: 449px;
+        }
+
+        .textarea_input_text textarea {
+            height: 163px;
+        }
+
+        .arrows {
+            top: 677px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="rectangle1">
+                <div class="ellipse1"></div>
+                <div class="ellipse2"></div>
+            </div>
+            <div class="lines">
+                <div class="rectangle-line-white"></div>
+                <div class="rectangle-line-green"></div>
+            </div>
+        </div>
+        <div class="question">
+            <h1>Опишите ваш опыт посещения Доктор Профи</h1>
+        </div>
+        <div class="clarification">
+            <h2>Вы можете оставить отзыв о работе медцентра доктора. Или пропустить вопрос</h2>
+        </div>
+        <form method="post">
+            <div class="textarea_input_text">
+            <textarea type="text" name="review_text" placeholder="Ваш отзыв"
+                      th:text="${currentReview.review_text}"
+                      th:value="${currentReview.review_text}"
+                      class="form-control"></textarea>
+            </div>
+            <div class="arrows">
+            <span>
+                <img th:src="@{/img/vector_left_50.png}"/>
+                <input type="submit" name="isBack" value="true">
+            </span>
+                <span>
+                <img th:src="@{/img/vector_right_100.png}"/>
+                <input type="submit" name="isBack" value="false">
+            </span>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

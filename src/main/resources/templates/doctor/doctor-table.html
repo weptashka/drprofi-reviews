@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Табица с докторами</title>
+</head>
+<style>
+  p {
+    margin: 2px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table {
+    width: 90%;
+  }
+</style>
+<body>
+<h1>Таблица докторов</h1>
+<div>
+  <table>
+    <tr>
+      <th><p>ID</p></th>
+      <th><p>Фамилия</p></th>
+      <th><p>Имя</p></th>
+      <th><p>Отчество</p></th>
+    </tr>
+    <tr th:each="el: ${doctors}">
+      <th><p th:text="${el.id}"></p></th>
+      <th><p th:text="${el.lastName}"></p></th>
+      <th><p th:text="${el.firstName}"></th>
+      <th><p th:text="${el.patronymic}"></th>
+    </tr>
+  </table>
+</div>
+</div>
+</div>
+<a href="/hello">Назад </a> </br></br></br>
+</body>
+</html>

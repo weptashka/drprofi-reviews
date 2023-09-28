@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Оценка</title>
+    <style>
+        .lines {
+            left: 120px;
+            top: 297px;
+        }
+
+        .rectangle-line-green {
+            width: 190px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="rectangle1">
+                <div class="ellipse1"></div>
+                <div class="ellipse2"></div>
+            </div>
+            <div class="lines">
+                <div class="rectangle-line-white"></div>
+                <div class="rectangle-line-green"></div>
+            </div>
+            <div class="question">
+                <h1>Ваши впечатления от посещения Доктoр Профи</h1>
+            </div>
+            <div class="progress-line"></div>
+            <form method="post">
+                <div class="grade-emoji">
+                <span><img th:src="@{img/grade1.png}"/><input type="submit" name="grade" value="1"
+                                                              alt="Grade 1"></span>
+                    <span><img th:src="@{img/grade2.png}"/><input type="submit" name="grade" value="2"
+                                                                  alt="Grade 2"></span>
+                    <span><img th:src="@{img/grade3.png}"/><input type="submit" name="grade" value="3"
+                                                                  alt="Grade 3"></span>
+                    <span><img th:src="@{img/grade4.png}"/><input type="submit" name="grade" value="4"
+                                                                  alt="Grade 4"></span>
+                    <span><img th:src="@{img/grade5.png}"/><input type="submit" name="grade" value="5"
+                                                                  alt="Grade 5"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>
